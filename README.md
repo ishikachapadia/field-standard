@@ -9,7 +9,8 @@ A full-stack online grocery store: a single-page storefront backed by a PHP/MySQ
   - `easy_groceries.class.php` — the core class: catalogue queries, account creation, and login with salted, peppered SHA-1 password hashing
   - `get_departments.php`, `get_department.php`, `get_product.php` — catalogue endpoints returning JSON
   - `create_account.php`, `login.php` — account endpoints
-- **`images/`** — department and product photography, hero images, and icons used by the storefront.
+- **`assets/`** — the storefront's styles and scripts (`app.css`, `main.js`, plus the Foundation framework files the site was built on) and the interface images under `assets/img/`.
+- **`images/`** — department photography, hero images, and icons used by the storefront.
 
 ## Running it
 
@@ -17,7 +18,7 @@ The class expects a PDO connection file at `services/inc/connect_pdo.php` provid
 
 ## Status
 
-Published as a **code case study** — the original hosting and database are retired, so there is no live demo. The credentials file and server error logs were deliberately excluded from this repo.
+Published as a **code case study** — the original hosting and database are retired, so there is no live demo. The credentials file and server error logs were deliberately excluded from this repo. The full product catalogue photo set and the original database dump are intentionally not published: the dump contains real customer data from the retired store.
 
 ## Tech
 
