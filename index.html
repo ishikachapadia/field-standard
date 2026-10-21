@@ -1,0 +1,723 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy Groceries</title>
+  <link rel="stylesheet" href="assets/css/foundation.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <link rel="stylesheet" href="assets/css/app.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK1DBWE0DG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DK1DBWE0DG');
+</script>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="header-container">
+        <a href="#/home/">
+      <img id="site-logo" class="logo click-home go_home" src="assets/img/logo.png" data-home-logo="assets/img/logo.png" data-inner-logo="assets/img/logo-light.png" alt="Logo">
+        </a>
+
+        <div class="header-right">
+            <nav class="main-nav">
+                  <div class="nav-item-dropdown">
+                      <a class="nav-link" href="javascript:void(0)" style="cursor:default;">DEPARTMENTS &#9660;</a>
+                      <ul class="dropdown-content department-dropdown"></ul>
+                  </div>
+                  <a class="nav-link" href="#/location/">LOCATIONS</a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search essentials...">
+                <img src="assets/img/search.png" alt="search" class="search-submit">
+            </div>
+
+            <div class="user-icons">
+                <img src="assets/img/user.png" alt="User" class="icon-white click-login open_login" data-open="loginModal" style="cursor: pointer;">
+                <img src="assets/img/cart.png" alt="Cart" class="icon-white click-cart">
+            </div>
+        </div>
+    </div>
+</header>
+<section id="home" class="home-show hideAll">
+    
+    <div class="main-content-wrapper" style="position: relative; overflow: hidden;">
+
+        <div class="hero-bg-curve">
+            <img src="assets/img/bgCurve.svg" alt="Background Shape">
+        </div>
+
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>FRESH.<br>ESSENTIALS.<br><span class="highlight">QUICK.</span><br>CURATED.</h1>
+                    <p>The daily standard. Delivered same day.</p>
+                    <button class="btn-primary">Shop Now</button>
+                </div>
+                
+                <div class="hero-image-overlay">
+                    <img src="assets/img/heroBasket.png" alt="Fruit Basket" class="floating-fruit">
+                </div>
+            </div>
+        </section>
+
+        <section class="discount-banner">
+            <div class="discount-container">
+                
+                <div class="discount-image-left">
+                    <img src="assets/img/discount-left-curve.svg" class= "discount-left-curve" alt="Olive Oil Bottle">
+                    <img src="assets/img/discount-left-spoon.png" class= "discount-left-spoon" alt="Olive Oil Bottle">
+                    <img src="assets/img/discount-left-oil.png" class= "discount-left-oil" alt="Olive Oil Bottle">
+                </div>
+
+                <div class="discount-content">
+                    <h2>Olive Oil 30% Off</h2>
+                    <p>Limited inventory left.</p>
+
+                    <div class="countdown">
+                        <div class="time-box">
+                            <span>01</span>
+                            <label>days</label>
+                        </div>
+                        <div class="time-box">
+                            <span>08</span>
+                            <label>hrs</label>
+                        </div>
+                        <div class="time-box">
+                            <span>52</span>
+                            <label>mins</label>
+                        </div>
+                    </div>
+
+                    <button class="btn-dark">Get Offer</button>
+                </div>
+
+                <div class="discount-image-right">
+                    <img src="assets/img/oliveRight.png" alt="Olive Branch" class="floating-herbs">
+                </div>
+            </div>
+        </section>
+
+              <!-- Categories -->
+        <section class="categories-section">
+            <div class="categories-container">
+                
+                <div class="category-card click-department" data-name="Bakery">
+                        <img src="assets/img/bakery.png" alt="Bakery" class="product-img">
+                </div>
+
+                <div class="category-card click-department" data-name="Milk & Dairy">
+                        <img src="assets/img/dairy.png" alt="Dairy" class="product-img">
+                </div>
+
+<div class="category-card click-department" data-name="Pantry">
+                        <img src="assets/img/pasta.png" alt="Pasta" class="product-img">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="restock-section">
+<div class="container">
+<h2 class="section-title">ESSENTIALS RESTOCK</h2>
+
+<div class="product-grid-frame products-grid">
+          </div>
+          
+</div>
+</section>
+
+<section class="restock-section">
+<div class="container">
+<h2 class="section-title">JUST ARRIVED</h2>
+
+<div class="product-grid-frame products-grid">
+</div>
+</div>
+</section>
+  </div> <!-- /main-content-wrapper -->
+</section> <!-- /home -->
+
+  <!-- DEPARTMENT PAGE -->
+  <main class="container-dep">
+        <section id="department" class="show-department hideAll" style="display:none;">
+
+        <div class="cell large-12 medium-12 small-12 grey1 height1">Home > <span class="dept-name">Department</span></div>
+        <div class="cell large-12 medium-12 small-12 grey1 height3 department-title">Department</div>
+        <div class="cell large-12 medium-12 small-12 grey2 height1">Sort By</div>
+
+        <div class="department-content-layout">
+          <aside class="department-sidebar" aria-label="Departments sidebar">
+            <h3 class="department-sidebar-title">Departments</h3>
+            <ul class="department-sidebar-list"></ul>
+          </aside>
+
+          <div class="department-main-content">
+            <section class="restock-section">
+                <div class="container">
+
+                    <div class="product-grid-frame products-grid">
+                        
+                    </div>
+                    <div id="department-pagination" class="pagination-container"></div>
+
+                </div>
+            </section>
+          </div>
+        </div>
+      
+  </section>
+    </main>
+
+  <!-- PRODUCT PAGE -->
+  <main class="container-prod">
+    <section id="product" class="show-product hideAll" style="display:none;">
+
+ <nav class="breadcrumb">
+    <div class="container">
+        <a href="javascript:void(0)">Home</a> &gt; <a href="javascript:void(0)">Bakery</a> &gt; <span>Pepperbridge Farm Bread</span>
+    </div>
+</nav>
+
+<section class="product-main-section">
+    <div class="product-container-bg">
+        <div class="product-white-card">
+            <div class="product-top-row">
+                <div class="product-image-large">
+                    <img src="assets/img/product1.png" alt="Pepperbridge Farm Bread">
+                </div>
+
+                <div class="product-info-summary">
+                    <span class="brand-label">Pepperbridge Farm</span>
+                    <h1 class="product-title">Bread</h1>
+                    <span class="product-sku">219358505235</span>
+                    <div class="product-price-large">$5.99</div>
+                    <span class="product-weight">250g</span>
+
+                    <div class="product-action-large">
+                        <button class="qty-btn">�</button>
+                        <span>Add to Cart</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="restock-section">
+    <div class="container">
+        <h2 class="section-title">JUST ARRIVED</h2>
+        
+        <div class="product-grid-frame related-products-grid"></div>
+</section>
+
+    </section>
+  </main>
+
+  <!-- LOCATION PAGE -->
+  <main class="grid-container">
+    <section id="location" class="show-location hideAll" style="display:none; padding: 40px 0;">
+      <div style="max-width:1200px; margin: 0 auto;">
+        <h1 style="font-size:32px; font-weight:700; margin-bottom:30px; color:#243c2a;">Store Location</h1>
+
+        <div style="margin-bottom: 40px;">
+          <div style="background:#fff; border-radius:12px; padding:24px; box-shadow: 0 6px 18px rgba(20,30,20,.08);">
+            <h3 style="color:#4B5338; font-size:18px; font-weight:700; margin-bottom:12px;">Durham College</h3>
+            <p style="color:#666; margin-bottom:8px;"><strong>Address:</strong> 2000 Simcoe St N, Oshawa, ON L1G 0C5</p>
+            <p style="color:#666; margin-bottom:8px;"><strong>Phone:</strong> (905) 721-2000</p>
+            <p style="color:#666; margin-bottom:16px;"><strong>Hours:</strong><br>Mon-Fri: 8am - 8pm<br>Sat-Sun: 10am - 5pm</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Durham+College+2000+Simcoe+St+N+Oshawa+ON" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#4B5338; color:#fff; text-decoration:none; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-weight:600;">Get Directions</a>
+          </div>
+        </div>
+
+        <!-- Google Map -->
+        <div style="margin-bottom:30px;">
+          <h2 style="font-size:20px; font-weight:700; margin-bottom:16px; color:#243c2a;">Durham College Map</h2>
+          <iframe width="100%" height="450" style="border-radius:12px; border:none;" src="https://www.google.com/maps?q=Durham+College+2000+Simcoe+St+N+Oshawa+ON&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FORGOT PASSWORD PAGE -->
+  <main class="grid-container">
+      <section id="forgotpassword" class="show-forgot hideAll" style="display:none;">
+          <div class="forgot-header">Forgot Password</div>
+          <p class="forgot-sub">Enter your email and we'll send a link to reset your password.</p>
+          <form id="forgot-form" class="vertical-form" action="javascript:void(0)" onsubmit="event.preventDefault(); alert('Reset link sent � check your email (mock).'); location.href='#/login/';">
+            <label for="forgot-email">Email</label>
+            <input id="forgot-email" type="email" name="email" placeholder="you@example.com" required />
+            <div class="form-row">
+              <a href="javascript:void(0)" class="click-login open_login" data-close>Back to Login</a>
+            </div>
+            <button type="submit" class="primary-btn">Send Reset Link</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SIGN UP PAGE -->
+    <section id="signup" class="show-register hideAll" style="display:none;">
+      <div class="signup-wrapper">
+        <div class="signup-card">
+          <div class="signup-header">Create Account</div>
+          <form id="create-account" class="vertical-form" action="javascript:void(0)">
+            <label for="signup-email">Email:</label>
+            <input type="text" id="signup-email" name="email" class="email" placeholder="Email" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" class="password" placeholder="Password" required>
+            <button class="primary-btn" type="button" name="signup" id="signup-btn" onclick="app.postRegister()">Signup</button>
+          </form>
+          <div class="form-row" style="margin-top: 15px;">
+            <a href="javascript:void(0)" class="click-login open_login" data-close>Already have an account? Login</a>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- END SIGNUP -->
+
+  <!-- CART PAGE -->
+  <main class="grid-container">
+    <section id="cart" class="show-cart hideAll" style="display:none;">
+
+      <div class="cart-header">Shopping Cart</div>
+
+      <div class="cart-layout">
+        <!-- LEFT: Cart Items -->
+        <div class="cart-left">
+
+          <div class="cart-card">
+            <div class="cart-row">
+              <div class="cart-row__img">Product Image</div>
+              <div class="cart-row__info">
+                <div class="cart-row__name">Pepperbridge Farm Bread</div>
+                <div class="cart-row__detail">250g  |  SKU: 219358505235</div>
+              </div>
+              <div class="cart-row__qty">
+                <button class="qty-btn">-</button>
+                <span class="qty-val">1</span>
+                <button class="qty-btn">+</button>
+              </div>
+              <div class="cart-row__price">$5.99</div>
+              <button class="cart-row__remove">Remove</button>
+            </div>
+          </div>
+
+          <div class="cart-card">
+            <div class="cart-row">
+              <div class="cart-row__img">Product Image</div>
+              <div class="cart-row__info">
+                <div class="cart-row__name">Organic Milk 1L</div>
+                <div class="cart-row__detail">1L  |  Farm Fresh</div>
+              </div>
+              <div class="cart-row__qty">
+                <button class="qty-btn">-</button>
+                <span class="qty-val">2</span>
+                <button class="qty-btn">+</button>
+              </div>
+              <div class="cart-row__price">$7.98</div>
+              <button class="cart-row__remove">Remove</button>
+            </div>
+          </div>
+
+          <div class="cart-card">
+            <div class="cart-row">
+              <div class="cart-row__img">Product Image</div>
+              <div class="cart-row__info">
+                <div class="cart-row__name">Pasta 500g</div>
+                <div class="cart-row__detail">500g  |  Classic</div>
+              </div>
+              <div class="cart-row__qty">
+                <button class="qty-btn">-</button>
+                <span class="qty-val">1</span>
+                <button class="qty-btn">+</button>
+              </div>
+              <div class="cart-row__price">$3.49</div>
+              <button class="cart-row__remove">Remove</button>
+            </div>
+          </div>
+
+          <button type="button" class="cart-continue click-home">Continue Shopping</button>
+        </div>
+
+        <!-- RIGHT: Order Summary -->
+        <div class="cart-right">
+          <div class="summary-card">
+            <div class="summary-card__head">Order Summary</div>
+            <div class="summary-card__body">
+              <div class="summary-line"><span>Subtotal</span><span>$17.46</span></div>
+              <div class="summary-line"><span>Shipping</span><span class="summary-free">FREE</span></div>
+              <div class="summary-line"><span>Tax</span><span>$1.40</span></div>
+              <div class="summary-promo">
+                <input type="text" placeholder="Promo code" class="promo-input" />
+                <button type="button" class="promo-apply">Apply</button>
+              </div>
+              <div class="summary-total"><span>Total</span><span>$18.86</span></div>
+              <button type="button" class="summary-checkout click-shipping">Proceed to Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- SHIPPING PAGE -->
+  <main class="grid-container">
+    <section id="shipping" class="show-shipping hideAll" style="display:none;">
+
+      <div class="co-steps">
+        <div class="co-step co-step--active"><span class="co-step__num">1</span> Shipping</div>
+        <div class="co-step"><span class="co-step__num">2</span> Payment</div>
+        <div class="co-step"><span class="co-step__num">3</span> Review</div>
+      </div>
+
+      <div class="co-layout">
+        <div class="co-left">
+          <div class="co-card">
+            <div class="co-card__head">Shipping Address</div>
+            <div class="co-card__body">
+              <div class="co-form-row">
+                <div class="co-field"><label>First Name</label><input type="text" placeholder="John" /></div>
+                <div class="co-field"><label>Last Name</label><input type="text" placeholder="Doe" /></div>
+              </div>
+              <div class="co-field"><label>Street Address</label><input type="text" placeholder="123 Main St" /></div>
+              <div class="co-field"><label>Apt / Suite</label><input type="text" placeholder="Apt 4B" /></div>
+              <div class="co-form-row">
+                <div class="co-field co-field--grow"><label>City</label><input type="text" placeholder="Toronto" /></div>
+                <div class="co-field"><label>State / Province</label><select><option>Ontario</option></select></div>
+                <div class="co-field"><label>Zip / Postal</label><input type="text" placeholder="M5V 2T6" /></div>
+              </div>
+              <div class="co-field"><label>Phone Number</label><input type="tel" placeholder="(416) 555-0199" /></div>
+            </div>
+          </div>
+
+          <div class="co-card">
+            <div class="co-card__head">Shipping Method</div>
+            <div class="co-card__body">
+              <label class="co-radio co-radio--selected"><input type="radio" name="ship" checked /><span>Standard Shipping (5-7 days)</span><strong>Free</strong></label>
+              <label class="co-radio"><input type="radio" name="ship" /><span>Express Shipping (2-3 days)</span><strong>$9.99</strong></label>
+              <label class="co-radio"><input type="radio" name="ship" /><span>Next Day Delivery</span><strong>$19.99</strong></label>
+            </div>
+          </div>
+
+          <div class="co-actions">
+            <button type="button" class="co-btn--secondary click-cart">Back to Cart</button>
+            <button type="button" class="co-btn--primary click-payment">Continue to Payment</button>
+          </div>
+        </div>
+
+        <div class="co-right">
+          <div class="summary-card">
+            <div class="summary-card__head">Order Summary</div>
+            <div class="summary-card__body">
+              <div class="summary-line"><span>Subtotal</span><span>$17.46</span></div>
+              <div class="summary-line"><span>Shipping</span><span class="summary-free">FREE</span></div>
+              <div class="summary-line"><span>Tax</span><span>$1.40</span></div>
+              <div class="summary-total"><span>Total</span><span>$18.86</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- PAYMENT PAGE -->
+  <main class="grid-container">
+    <section id="payment" class="show-payment hideAll" style="display:none;">
+
+      <div class="co-steps">
+        <div class="co-step co-step--done"><span class="co-step__num">1</span> Shipping</div>
+        <div class="co-step co-step--active"><span class="co-step__num">2</span> Payment</div>
+        <div class="co-step"><span class="co-step__num">3</span> Review</div>
+      </div>
+
+      <div class="co-layout">
+        <div class="co-left">
+          <div class="co-card">
+            <div class="co-card__head">Payment Method</div>
+            <div class="co-card__body">
+              <div class="co-tabs">
+                <button class="co-tab co-tab--active">Credit Card</button>
+                <button class="co-tab">PayPal</button>
+                <button class="co-tab">Apple Pay</button>
+              </div>
+              <div class="co-field"><label>Card Number</label><input type="text" placeholder="1234 5678 9012 3456" /></div>
+              <div class="co-field"><label>Name on Card</label><input type="text" placeholder="John Doe" /></div>
+              <div class="co-form-row">
+                <div class="co-field"><label>Expiry Date</label><input type="text" placeholder="MM / YY" /></div>
+                <div class="co-field"><label>CVV</label><input type="text" placeholder="123" /></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="co-card">
+            <div class="co-card__head">Billing Address</div>
+            <div class="co-card__body">
+              <label class="co-check"><input type="checkbox" checked /> Same as shipping address</label>
+              <label class="co-check"><input type="checkbox" /> Save card for future purchases</label>
+            </div>
+          </div>
+
+          <div class="co-actions">
+            <button type="button" class="co-btn--secondary click-shipping">Back to Shipping</button>
+            <button type="button" class="co-btn--primary click-review">Review Order</button>
+          </div>
+        </div>
+
+        <div class="co-right">
+          <div class="summary-card">
+            <div class="summary-card__head">Order Summary</div>
+            <div class="summary-card__body">
+              <div class="summary-line"><span>Subtotal</span><span>$17.46</span></div>
+              <div class="summary-line"><span>Shipping</span><span class="summary-free">FREE</span></div>
+              <div class="summary-line"><span>Tax</span><span>$1.40</span></div>
+              <div class="summary-total"><span>Total</span><span>$18.86</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- REVIEW PAGE -->
+  <main class="grid-container">
+    <section id="review" class="show-review hideAll" style="display:none;">
+
+      <div class="co-steps">
+        <div class="co-step co-step--done"><span class="co-step__num">1</span> Shipping</div>
+        <div class="co-step co-step--done"><span class="co-step__num">2</span> Payment</div>
+        <div class="co-step co-step--active"><span class="co-step__num">3</span> Review</div>
+      </div>
+
+      <div class="co-layout">
+        <div class="co-left">
+
+          <div class="co-card">
+            <div class="co-card__head">Shipping Address <button type="button" class="co-edit click-shipping">Edit</button></div>
+            <div class="co-card__body">
+              <p class="rv-text">John Doe<br>123 Main St, Apt 4B<br>Toronto, ON M5V 2T6<br>(416) 555-0199</p>
+            </div>
+          </div>
+
+          <div class="co-card">
+            <div class="co-card__head">Payment Method <button type="button" class="co-edit click-payment">Edit</button></div>
+            <div class="co-card__body">
+              <p class="rv-text">Credit Card ending in 4242</p>
+            </div>
+          </div>
+
+          <div class="co-card">
+            <div class="co-card__head">Order Items</div>
+            <div class="co-card__body">
+              <div class="rv-item">
+                <div class="rv-item__img">Product Image</div>
+                <div class="rv-item__info"><strong>Pepperbridge Farm Bread</strong><br>Qty: 1</div>
+                <div class="rv-item__price">$5.99</div>
+              </div>
+              <div class="rv-item">
+                <div class="rv-item__img">Product Image</div>
+                <div class="rv-item__info"><strong>Organic Milk 1L</strong><br>Qty: 2</div>
+                <div class="rv-item__price">$7.98</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="co-actions">
+            <button type="button" class="co-btn--secondary click-payment">Back to Payment</button>
+            <button type="button" class="co-btn--primary click-confirmation">Place Order</button>
+          </div>
+        </div>
+
+        <div class="co-right">
+          <div class="summary-card">
+            <div class="summary-card__head">Order Summary</div>
+            <div class="summary-card__body">
+              <div class="summary-line"><span>Subtotal</span><span>$17.46</span></div>
+              <div class="summary-line"><span>Shipping</span><span class="summary-free">FREE</span></div>
+              <div class="summary-line"><span>Tax</span><span>$1.40</span></div>
+              <div class="summary-total"><span>Total</span><span>$18.86</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ORDER CONFIRMATION PAGE -->
+  <main class="grid-container">
+    <section id="confirmation" class="show-complete hideAll" style="display:none;">
+
+      <div class="confirm-wrapper">
+        <div class="confirm-card">
+          <div class="confirm-icon">&#10003;</div>
+          <h2 class="confirm-title">Thank You For Your Order!</h2>
+          <p class="confirm-sub">Your order has been placed successfully.</p>
+          <div class="confirm-order">
+            <span class="confirm-label">Order Number</span>
+            <span class="confirm-number">#EG-20260210</span>
+          </div>
+          <p class="confirm-email">A confirmation email has been sent to your email address.</p>
+          <div class="confirm-details">
+            <div class="confirm-col">
+              <strong>Shipping To</strong>
+              <p>John Doe<br>123 Main St, Apt 4B<br>Toronto, ON M5V 2T6</p>
+            </div>
+            <div class="confirm-col">
+              <strong>Payment</strong>
+              <p>Credit Card ending in 4242<br>Total: $18.86</p>
+            </div>
+          </div>
+          <button type="button" class="co-btn--primary click-home" style="width:100%;margin-top:18px">Continue Shopping</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-links">
+            <div class="link-group">
+                <a href="javascript:void(0)">Licensing</a>
+                <a href="javascript:void(0)">Privacy Policy</a>
+                <a href="javascript:void(0)">Terms of Conditions</a>
+                <a href="javascript:void(0)">Careers</a>
+            </div>
+            <div class="link-group">
+                <a href="javascript:void(0)">Advertising</a>
+                <a href="javascript:void(0)">Data Usage</a>
+                <a href="javascript:void(0)">Cookies</a>
+                <a href="javascript:void(0)">Easter Egg</a>
+            </div>
+        </div>
+
+        <div class="footer-socials">
+            <a href="javascript:void(0)"><i class="fab fa-facebook"></i></a>
+            <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+            <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-disclaimer">
+            <p>All content and images used for educational purpose only</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Site modal container (will host login/signup/forgot forms) -->
+  <div id="loginModal" class="reveal site-modal" data-reveal aria-hidden="true">
+      <button class="close-button site-modal__close" data-close aria-label="Close" type="button">
+          <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="login-panel" style="padding: 20px;">
+        <h2>Login</h2>
+        <form id="login-form" class="vertical-form" action="javascript:void(0)" onsubmit="event.preventDefault(); window.app.postLogin && window.app.postLogin();">
+          <label for="login-email">Email</label>
+          <input id="login-email" type="email" placeholder="you@example.com" required />
+          <label for="login-password">Password</label>
+          <input id="login-password" type="password" placeholder="????????" required />
+          <div class="form-row">
+            <a href="#/forgot/" data-close>Forgot Password?</a>
+            <a href="#/register/" data-close>Create Account</a>
+          </div>
+          <button type="submit" id="login-submit" class="primary-btn">Login</button>
+        </form>
+      </div>
+  </div>
+</div>
+
+
+  
+  <script>
+  (function(){
+    var btn = document.getElementById('mobile-menu-toggle');
+    var nav = document.getElementById('mobile-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(e){
+      var isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      nav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    });
+    // Close when clicking outside
+    document.addEventListener('click', function(e){
+      if(!nav.classList.contains('open')) return;
+      if(e.target === btn || e.target.closest && e.target.closest('#mobile-nav')) return;
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      nav.setAttribute('aria-hidden','true');
+    });
+
+    // Close when a nav link is clicked (use delegation)
+    nav.addEventListener('click', function(e){
+      var link = e.target && e.target.closest && e.target.closest('a');
+      if(!link) return;
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      nav.setAttribute('aria-hidden','true');
+    });
+  })();
+  </script>
+
+  <script>
+  (function(){
+    // Scroll to top when navigation elements are activated (desktop links, SPA hash changes, mobile nav links)
+    function scrollTopSmooth(){
+      try{ window.scrollTo({ top: 0, behavior: 'smooth' }); }catch(e){ window.scrollTo(0,0); }
+    }
+
+    // Delegate clicks for nav triggers (anchors and elements with click- classes)
+    document.addEventListener('click', function(e){
+      var target = e.target;
+      // match anchors or elements used for navigation in this project
+      if(target.closest && (target.closest('a') || target.closest('.click-home') || target.closest('.click-department') || target.closest('.click-location') || target.closest('.click-login') || target.closest('.click-cart') || target.closest('.navigate'))){
+        // small delay to allow any route handling to run first
+        setTimeout(scrollTopSmooth, 60);
+      }
+    }, true);
+
+    // Also scroll to top on hashchange for SPA route navigation
+    window.addEventListener('hashchange', function(){
+      scrollTopSmooth();
+    });
+  })();
+  </script>
+  <script src="assets/js/vendor.js"></script>
+  <script src="assets/js/foundation.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="assets/js/sammy.min.js" type="text/javascript"></script>
+  <script src="assets/js/sammy.template.js"></script>
+  <script src="assets/js/main.js"></script>      
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
