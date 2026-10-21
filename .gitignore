@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Credentials and server logs — never commit
+services/inc/connect_pdo.php
+error_log
+**/error_log
